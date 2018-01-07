@@ -1,0 +1,97 @@
+.NavLevels {
+  position: absolute;
+  left: 0;
+  margin-left: 35%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.NavLevels::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 2px;
+  height: 70%;
+  max-height: 750px;
+  background-color: #555;
+  opacity: .35;
+  z-index: 10;
+}
+
+.NavLevels > ul {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 70%;
+  max-height: 750px;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  z-index: 10;
+}
+
+.NavLevels > ul > li {
+  position: relative;
+  top: -5px;
+  color: #fff;
+  font-size: 6px;
+  cursor: pointer; 
+}
+
+.NavLevels > ul > li > a::before {
+  position: absolute;
+  color: #555;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.NavLevels > ul > li > a {
+  position: relative;
+  color: #fff;
+  font-weight: 300;
+  font-size: 0;
+}
+
+.NavLevels > ul > li > a.Active {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.NavLevels > ul > li a:not(.Active)::before {
+  top: -16px
+}
+
+.NavLevels > ul > li:nth-child(1) a::before {
+  content: "01";
+}
+
+.NavLevels > ul > li:nth-child(2) a::before {
+  content: "02";
+}
+
+.NavLevels > ul > li:nth-child(3) a::before {
+  content: "03";
+}
+
+.NavLevels > ul > li > a.Active::before {
+  left: -33px;
+  color: #fff;
+}
+
+.NavLevels > ul > li > a.Active {
+  transition: color .4s ease-in-out;
+}
+
+.NavLevels > ul > li > a.Active {
+  opacity: 1;
+  visibility: visible;
+  transition: font-size .1s ease-in-out;
+}

@@ -1,0 +1,11 @@
+.Logo {
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center
+}
+
+.Logo h1 {
+  font-size: 1.250rem;
+  cursor: pointer
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import classes from './Home.css';
 import PostTitlePreview from '../../components/PostLitlePreview/PostLitlePreview';
-
+import HireUsButton from '../../components/UI/HireUsButton/HireUsButton';
 
 class HomeContainer extends Component {
   render() { 
@@ -11,6 +11,9 @@ class HomeContainer extends Component {
         <Row>
           <Col md={12} className={classes.HomeTitle}>
             <h1>Your next<br/>interactive<br/>experience</h1>
+            <div className={classes.ButtonHireUs}>
+              <HireUsButton show arrowMode/>
+            </div>
           </Col>
         </Row>
         <Row>

@@ -1,0 +1,15 @@
+.HomeTitle {
+  height: 60vh;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+.HomeTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 16px;
+  width: 30px;
+  height: 4px;
+  background-color: #0f33ff;
+}

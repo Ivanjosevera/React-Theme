@@ -40,7 +40,7 @@ class Layout extends Component {
                 <Col md={2} style={{height: '85vh'}}>
                     <NavLevels />
                 </Col>
-                <Col md={10}>
+                <Col md={9}>
                     <main className={classes.Content}>
                         {this.props.children}
                     </main>

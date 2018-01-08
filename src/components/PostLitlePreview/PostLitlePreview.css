@@ -1,0 +1,13 @@
+.postTitlePreview {
+  text-decoration: none;
+  transition: color .1s ease;
+}
+
+.postTitlePreview:not(:active) {
+  color: rgb(194, 194, 194) 
+}
+
+.postTitlePreview:hover,
+.postTitlePreview:active {
+  color: white;  
+}

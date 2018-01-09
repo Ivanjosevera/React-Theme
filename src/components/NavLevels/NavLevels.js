@@ -3,9 +3,6 @@ import { NavLink } from 'react-router-dom';
 import classes, { Active } from './NavLevels.css';
 
 class NavLevels extends Component {
-  state = {
-    level: 1
-  }
 
   render() {
     return (
@@ -30,6 +27,13 @@ class NavLevels extends Component {
               to="/about"
               activeClassName={Active}>
               About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/contact"
+              activeClassName={Active}>
+              Contact
             </NavLink>
           </li>
         </ul>

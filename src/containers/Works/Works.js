@@ -38,6 +38,14 @@ class WorksContainer extends Component {
         'alt':'Other image',
         'title':'Styles',
         'description':'Some examples in the documentation use style'
+      },
+      {
+        'id': 5,
+        'href':'/',
+        'src':'https://www.redditstatic.com/desktop-onboarding-snoo.png',
+        'alt':'Other image',
+        'title':'Styles',
+        'description':'Some examples in the documentation use style'
       }
     ]
   }
@@ -49,8 +57,13 @@ class WorksContainer extends Component {
           <Col md={12}>
             <Title text='Work' />
           </Col>
-          <Col md={12}>
-            <Carousel data={this.state.works}/>
+          <Col md={12} style={{
+                'display': 'flex',
+                'justifyContent': 'space-around'
+          }}>
+            <Carousel
+              data={this.state.works}
+              slidesToShow={3}/>
           </Col>
         </Row>
       </Container>

@@ -26,3 +26,12 @@
   width: 20px;
   fill: #fff;
 }
+
+.Arrow:disabled {
+  background-color: #3a3a3a;
+  cursor: not-allowed
+}
+.Arrow:disabled svg {
+  width: 12px;
+  fill: grey;
+}

@@ -25,7 +25,8 @@ class Arrow extends Component {
               dangerouslySetInnerHTML={{__html: arrow}} 
               className={classes.Arrow}
               style={style}
-              onClick={this.props.onClick}/>;
+              onClick={this.props.clicked}
+              disabled={this.props.disabled}/>;
   }
 }
  

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, withRouter, Redirect } from 'react-router-dom';
-
+import ContactContainer from './containers/Contact/Contact';
 import WorksContainer from './containers/Works/Works';
 import HomeContainer from './containers/Home/Home';
 import AboutContainer from './containers/About/About';
@@ -10,16 +10,17 @@ import CustomAnimatedSwitch from './hoc/CustomAnimatedSwitch/CustomAnimatedSwitc
 class App extends Component {
   render () {
     return (
-      <div>
+      <React.Fragment>
         <Layout> 
           <CustomAnimatedSwitch>
             <Route path="/" exact component={HomeContainer} />
             <Route path="/works" exact component={WorksContainer} />
             <Route path="/about" exact component={AboutContainer} />
+            <Route path="/contact" exact component={ContactContainer} />
             <Redirect to="/" />
           </CustomAnimatedSwitch>
         </Layout>
-      </div>
+      </React.Fragment>
     );
   }
 }

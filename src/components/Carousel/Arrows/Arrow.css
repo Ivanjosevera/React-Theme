@@ -20,17 +20,20 @@
   cursor: pointer;
   border-style: none;
   z-index: 1;
+  transition: background-color .5s ease-in-out;
 }
 
 .Arrow svg {
   width: 20px;
   fill: #fff;
+  transition: all .25s ease;
 }
 
 .Arrow:disabled {
   background-color: #3a3a3a;
-  cursor: not-allowed
+  cursor: not-allowed;
 }
+
 .Arrow:disabled svg {
   width: 12px;
   fill: grey;

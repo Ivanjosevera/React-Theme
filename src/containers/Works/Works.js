@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import classes from './Works.css';
+// import classes from './Works.css';
 import Carousel from '../../components/Carousel/Carousel';
 import Title from '../../components/UI/Title/Title';
 
@@ -57,10 +57,7 @@ class WorksContainer extends Component {
           <Col md={12}>
             <Title text='Work' />
           </Col>
-          <Col md={12} style={{
-                'display': 'flex',
-                'justifyContent': 'space-around'
-          }}>
+          <Col md={12} align="center">
             <Carousel
               data={this.state.works}
               slidesToShow={3}/>

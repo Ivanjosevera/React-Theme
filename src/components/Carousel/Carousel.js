@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
+
 import classes from './Carousel.css';
 import Arrow from './Arrows/Arrow';
 import Item from './Item/Item';
+
 
 class Carousel extends Component {
   state = {
@@ -50,9 +53,19 @@ class Carousel extends Component {
           prev
           clicked={this.handleClickPrev}
           disabled={this.state.index === 0}/>
-          <div className={classes.Carousel}>
-            { items }
-          </div>
+        <CSSTransitionGroup
+          transitionName={ {
+            enter: classes.CarouselItemEnter,
+            enterActive: classes.CarouselItemEnterActive,
+            leave: classes.CarouselItemLeave,
+            leaveActive: classes.CarouselItemLeaveActive
+          } }
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+          component="div"
+          className={classes.Carousel}>
+          { items }
+        </CSSTransitionGroup>
         <Arrow
           next
           clicked={this.handleClickNext}

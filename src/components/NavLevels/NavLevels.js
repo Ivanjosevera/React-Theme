@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import classes, { Active } from './NavLevels.css';
 
-class NavLevels extends Component {
 
+class NavLevels extends Component {
   render() {
     return (
       <nav className={classes.NavLevels}>

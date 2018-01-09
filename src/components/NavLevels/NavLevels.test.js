@@ -5,9 +5,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 import { NavLink } from 'react-router-dom';
 
-import NavigationItems from './NavigationItems';
-import NavigationItem from './NavigationItem/NavigationItem';
-
+import NavLevels from './NavLevels';
 
 configure({adapter: new Adapter()})
 
@@ -15,10 +13,10 @@ describe('<App />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<NavigationItems />)
+    wrapper = shallow(<NavLevels />)
   })
 
-  it('Have 4 <NavigationItems />', () => {
-    expect(wrapper.find(NavigationItem).length).toBe(4)
+  it('Have 4 <NavLink />', () => {
+    expect(wrapper.find(NavLink).length).toBe(4)
   })
 })

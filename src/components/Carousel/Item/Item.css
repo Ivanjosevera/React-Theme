@@ -1,6 +1,12 @@
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 .Item > a {
   text-decoration: none;
   color: white;
+  animation: fadein 2s;
 }
 
 .Item > a > div {

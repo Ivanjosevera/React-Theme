@@ -13,13 +13,13 @@ class App extends Component {
     return (
       <React.Fragment>
         <Layout> 
-          { /* <CustomAnimatedSwitch> */ }
+          <CustomAnimatedSwitch>
             <Route path="/" exact component={HomeContainer} />
             <Route path="/works" exact component={WorksContainer} />
             <Route path="/about" exact component={AboutContainer} />
             <Route path="/contact" exact component={ContactContainer} />
             <Redirect to="/" />
-          { /* </CustomAnimatedSwitch> */ }
+          </CustomAnimatedSwitch>
         </Layout>
       </React.Fragment>
     );

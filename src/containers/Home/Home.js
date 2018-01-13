@@ -3,14 +3,14 @@ import { Container, Row, Col } from 'react-grid-system';
 import classes from './Home.css';
 import PostTitlePreview from '../../components/PostLitlePreview/PostLitlePreview';
 import HireUsButton from '../../components/UI/HireUsButton/HireUsButton';
-
+import TitleBold from '../../components/TitleBold/TitleBold';
 class HomeContainer extends Component {
   render() { 
     return (
       <Container fluid>
         <Row>
           <Col md={12} className={classes.HomeTitle}>
-            <h1>Your next<br/>interactive<br/>experience</h1>
+            <TitleBold>Your next<br/>interactive<br/>experience</TitleBold>
             <div className={classes.ButtonHireUs}>
               <HireUsButton show arrowMode/>
             </div>

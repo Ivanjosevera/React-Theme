@@ -60,8 +60,8 @@ class Carousel extends Component {
             leave: classes.CarouselItemLeave,
             leaveActive: classes.CarouselItemLeaveActive
           } }
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={700}
           component="div"
           className={classes.Carousel}>
           { items }

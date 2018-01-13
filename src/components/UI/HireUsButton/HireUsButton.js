@@ -7,7 +7,6 @@ const hireUsButton = (props) => {
   let style = {
     'display': props.show ? 'inline-block' : 'none'
   }
-  let styleSpan;
 
   if (!props.arrowMode) {
     return (

@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import classes from './ContactBox.css';
 import Button from './Button/Button';
 
-class ContactBox extends Component {
-  render() { 
-    return ( 
-    <div>
+
+const ContactBox = props => {
+  return ( 
+    <div className={classes.ContactBox}>
       <div>
         <p>Pawia 5, 31-154 Kraków, Poland</p>
         <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
@@ -29,8 +30,7 @@ class ContactBox extends Component {
         </li>
       </ul>
     </div>
-    )
-  }
+  )
 }
  
 export default ContactBox;

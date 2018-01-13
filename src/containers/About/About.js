@@ -14,10 +14,10 @@ class AboutContainer extends Component {
           <Row>    
             <Col md={12}  className={classes.About}>
               <TitleBold>We<br/>Believe<br/>Passionate<br/>People<br/></TitleBold>
+              <HireUsButton show arrowMode isTransparent/>
             </Col>
           </Row>
         </Container>
-        <HireUsButton show arrowMode isTransparent/>
       </React.Fragment>
       
     )

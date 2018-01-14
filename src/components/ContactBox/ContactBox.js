@@ -14,17 +14,17 @@ const ContactBox = props => {
       </div>
       <ul>
         <li>
-          <Button>
+          <Button bgcolor="#1769ff">
             <a href="#0">Bēhance</a>
           </Button>
         </li>
         <li>
-          <Button>
+          <Button bgcolor="#ea4c89">
             <a href="#0">dribbble</a>
           </Button>
         </li>
         <li>
-          <Button>
+          <Button bgcolor="#0f33ff">
             <a href="mailto:ouremail@gmail.com">Contact Us</a>
           </Button>
         </li>

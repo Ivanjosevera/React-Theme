@@ -1,5 +1,15 @@
 import React from 'react';
 
-const button = props => <button>{props.children}</button>
+import classes from './Button.css';
+
+const button = props => {
+  let style = {
+    'backgroundColor': props.bgcolor
+  }
+
+  return (
+    <button style={style} className={classes.Button}>{props.children}</button>
+  )
+}
 
 export default button; 

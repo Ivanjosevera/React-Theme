@@ -10,7 +10,7 @@ class ContactContainer extends Component {
     return (
       <Container fluid className={classes.Contact}>
         <Row align="end">
-          <Col md={4} offset={{ md: 8 }} debug>
+          <Col md={4} offset={{ md: 8 }} className={classes.ContactCol}>
             <ContactBox/>
           </Col>
         </Row>

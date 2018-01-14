@@ -1,0 +1,25 @@
+.ContactBox {
+  padding: 45px 45px;
+  text-align: center;
+  box-shadow: 0 0 12px 0 rgba(212, 212, 212, 0.514);
+}
+
+.ContactBox > div > p,
+.ContactBox > div > a {
+  display: block;
+  margin: 14px 0;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: .9rem
+}
+
+.ContactBox > ul {
+  list-style: none;
+  padding: 0
+}
+
+.ContactBox > ul > li {
+  width: 130px;
+  margin: 0 auto 25px auto;
+}

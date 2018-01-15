@@ -5,7 +5,6 @@ import classes from './Carousel.css';
 import Arrow from './Arrows/Arrow';
 import Item from './Item/Item';
 
-
 class Carousel extends Component {
   state = {
     index: 0,
@@ -15,9 +14,9 @@ class Carousel extends Component {
 
   componentDidMount() {
     this.setState({
-       slidesToShow: this.props.slidesToShow,
-       totalSlides: this.props.data.length
-      });
+      slidesToShow: this.props.slidesToShow,
+      totalSlides: this.props.data.length
+    });
   }
 
   handleClickNext = () => {
@@ -37,15 +36,35 @@ class Carousel extends Component {
   }
 
   render() {
-    let data = this.props.data,
-        count = 1,
-        ComponentItem = this.props.componentItem || Item,
-        items = data.map((e, index) => {
-          if (index >= this.state.index && count <= this.state.slidesToShow) {
-            count++;
-            return <ComponentItem {...e} key={e.id}/>
+    const data = this.props.data;
+    const ComponentItem = this.props.componentItem || Item;
+    let count = 1;
+    const items = data.map((item, index) => {
+      if (index >= this.state.index && count <= this.state.slidesToShow) {
+        let customStyles = {};
+        count++;
+
+        if (this.state.totalSlides % 2 !== 0) {
+          const oddIndex = Math.round(this.state.slidesToShow / 2) + 1;
+
+          if (count === oddIndex) {
+            console.log(index, oddIndex)
+
+            customStyles = {
+              transform: 'scale(1.5, 1.5)'
+            }
           }
-        });
+        }
+
+        return <ComponentItem {...item} key={item.id} style={customStyles} />
+      }
+    });
+    const transitionClasess = {
+      enter: classes.CarouselItemEnter,
+      enterActive: classes.CarouselItemEnterActive,
+      leave: classes.CarouselItemLeave,
+      leaveActive: classes.CarouselItemLeaveActive
+    };
       
     return (
       <React.Fragment>
@@ -54,17 +73,12 @@ class Carousel extends Component {
           clicked={this.handleClickPrev}
           disabled={this.state.index === 0}/>
         <CSSTransitionGroup
-          transitionName={ {
-            enter: classes.CarouselItemEnter,
-            enterActive: classes.CarouselItemEnterActive,
-            leave: classes.CarouselItemLeave,
-            leaveActive: classes.CarouselItemLeaveActive
-          } }
+          transitionName={transitionClasess}
           transitionEnterTimeout={1000}
           transitionLeaveTimeout={700}
-          component="div"
+          component='div'
           className={classes.Carousel}>
-          { items }
+          {items}
         </CSSTransitionGroup>
         <Arrow
           next

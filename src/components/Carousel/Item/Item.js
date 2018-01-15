@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Item.css';
 
 const item = props => ( 
-  <div className={classes.Item}>
+  <div {...props} className={classes.Item}>
     <a href={props.href}>
       <div>
         <img src={props.src} alt={props.alt} />

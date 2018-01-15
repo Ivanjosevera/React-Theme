@@ -4,7 +4,6 @@ import { Container, Row, Col } from 'react-grid-system';
 import Carousel from '../../components/Carousel/Carousel';
 import Title from '../../components/UI/Title/Title';
 
-
 class WorksContainer extends Component {
   state = {
     works: [
@@ -53,8 +52,8 @@ class WorksContainer extends Component {
   render() { 
     return (
       <Container fluid>
-        <Row>
-          <Col md={12}>
+        <Row style={{ marginTop: '100px' }}>
+          <Col md={12} style={{ marginBottom: '50px' }}>
             <Title text='Work' />
           </Col>
           <Col md={12} align="center">

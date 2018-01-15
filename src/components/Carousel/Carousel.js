@@ -48,8 +48,6 @@ class Carousel extends Component {
           const oddIndex = Math.round(this.state.slidesToShow / 2) + 1;
 
           if (count === oddIndex) {
-            console.log(index, oddIndex)
-
             customStyles = {
               transform: 'scale(1.5, 1.5)'
             }

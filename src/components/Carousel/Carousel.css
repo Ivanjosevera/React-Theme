@@ -2,21 +2,22 @@
   margin-top: 3em;
   width: 80%;
   display: flex;
-  padding: 0 0 100px 0
+  padding-top: 20px;
+  padding-bottom: 80px
 }
 
 .Carousel > div {
   text-align: center;
-  padding: 1%;
+  padding: 1%
 }
 
 .CarouselItemEnter {
-  opacity: 0.01;
+  opacity: 0.1;
 }
 
 .CarouselItemEnterActive {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: all 500ms ease-in;
 }
 
 .CarouselItemLeave {
@@ -26,5 +27,5 @@
 .CarouselItemLeaveActive {
   opacity: 0.1;
   transform: translate(0, 3vw);
-  transition: all 500ms ease-in;
+  transition: all 500ms ease-out;
 }

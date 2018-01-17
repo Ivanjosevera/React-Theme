@@ -75,11 +75,7 @@ class Carousel extends Component {
             {state => {
               const cssClasses = [
                 classes.Carousel,
-                state === "entering"
-                  ? classes.FadeIn
-                  : state === "exiting"
-                    ? classes.FadeOut
-                    : null
+                state === "entering" && classes.FadeIn
               ];
               return (
                 <div className={cssClasses.join(" ")}>

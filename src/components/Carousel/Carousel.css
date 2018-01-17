@@ -7,24 +7,30 @@
 
 .Carousel > div {
   text-align: center;
-  padding: 1%;
+  padding: 5%;
 }
 
-.CarouselItemEnter {
-  opacity: 0.01;
+@media (max-width:  1400px) {
+  .Carousel > div {
+    text-align: center;
+    padding: 3%;
+  }
 }
 
-.CarouselItemEnterActive {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+.FadeIn {
+  animation: fadein 2s;
 }
 
-.CarouselItemLeave {
-  opacity: 1;
+.FadeOut {
+  animation: fadeout 2s;
 }
 
-.CarouselItemLeaveActive {
-  opacity: 0.1;
-  transform: translate(0, 3vw);
-  transition: all 500ms ease-in;
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }

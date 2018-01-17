@@ -52,8 +52,8 @@ class WorksContainer extends Component {
   render() { 
     return (
       <Container fluid>
-        <Row style={{ marginTop: '100px' }}>
-          <Col md={12} style={{ marginBottom: '50px' }}>
+        <Row>
+          <Col md={12}>
             <Title text='Work' />
           </Col>
           <Col md={12} align="center">

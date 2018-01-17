@@ -5,10 +5,6 @@ import classes from './Carousel.css';
 import Arrow from './Arrows/Arrow';
 import Item from './Item/Item';
 
-const animationTiming = {
-  enter: 1000,
-  exit: 1000
-};
 
 class Carousel extends Component {
   state = {
@@ -72,10 +68,10 @@ class Carousel extends Component {
           disabled={this.state.index === 0}/>
           <Transition
             mountOnEnter 
-            unmountOnExit 
+            unmountOnExit
             in={this.state.moving} 
-            timeout={animationTiming}
-            onExiting={() => this.state.moving || this.setState({moving: true})}>
+            timeout={{enter: 1000}}
+            onExit={() => this.state.moving || this.setState({moving: true})}>
             {state => {
               const cssClasses = [
                 classes.Carousel,

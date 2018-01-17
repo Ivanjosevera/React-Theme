@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-// import classes from './Works.css';
 import Carousel from '../../components/Carousel/Carousel';
 import Title from '../../components/UI/Title/Title';
 

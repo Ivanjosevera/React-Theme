@@ -5,8 +5,12 @@ import ContactContainer from './containers/Contact/Contact';
 import WorksContainer from './containers/Works/Works';
 import HomeContainer from './containers/Home/Home';
 import AboutContainer from './containers/About/About';
+
 import Layout from './hoc/Layout/Layout';
 import CustomAnimatedSwitch from './hoc/CustomAnimatedSwitch/CustomAnimatedSwitch';
+import withI18NTranslation from './hoc/withI18NTranslation/withI18NTranslation';
+
+import I18NinitialState from './i18n/en-GB.json';
 
 class App extends Component {
   render () {
@@ -26,4 +30,12 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+export default withI18NTranslation(
+  withRouter(App), {
+    fallBackLocale : "en-GB",
+    initialState : {
+      locale : "en-GB",
+      data : I18NinitialState
+    }
+  }
+);

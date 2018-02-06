@@ -4,6 +4,7 @@ import classes from './Home.css';
 import PostTitlePreview from '../../components/PostLitlePreview/PostLitlePreview';
 import HireUsButton from '../../components/UI/HireUsButton/HireUsButton';
 import TitleBold from '../../components/TitleBold/TitleBold';
+import { i18n } from "../../lib/react-i18n-helper/";
 
 
 class HomeContainer extends Component {
@@ -31,7 +32,7 @@ class HomeContainer extends Component {
       <Container fluid>
         <Row>
           <Col md={12} className={classes.HomeTitle}>
-            <TitleBold>Your next<br/>interactive<br/>experience</TitleBold>
+            <TitleBold>{i18n('you_next')}<br/>{i18n('interactive')}<br/>{i18n('experience')}</TitleBold>
             <HireUsButton show arrowMode>HIRE US</HireUsButton>
           </Col>
         </Row>

@@ -6,6 +6,7 @@ import classes from './Layout.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 import NavLevels from '../../components/NavLevels/NavLevels';
+import { changeLocale } from '../../lib/react-i18n-helper';
 
 class Layout extends Component {
   state = {
@@ -29,6 +30,12 @@ class Layout extends Component {
   render () {
     return (
       <React.Fragment>
+        <div>
+            <button onClick={() => changeLocale("pt-PT")}>Portugues</button>
+            <button onClick={() => changeLocale("en-GB")}>Ingles</button>
+            <button onClick={() => changeLocale("fr-FR")}>Francia</button>
+            <button onClick={() => changeLocale("es-ES")}>Español</button>
+        </div>
         <Toolbar 
             clickRedirect={this.handlerRedirectHome}
             drawerToggleClicked={this.sideDrawerToggleHandler} />

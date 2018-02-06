@@ -43,8 +43,11 @@ class Carousel extends Component {
   render() {
     const data = this.props.data;
     const ComponentItem = this.props.componentItem || Item;
+    const items = [];
+
     let count = 1;
-    const items = data.map((item, index) => {
+
+    data.forEach((item, index) => {
       if (index >= this.state.index && count <= this.state.slidesToShow) {
         let customStyles = {};
         count++;
@@ -56,7 +59,7 @@ class Carousel extends Component {
             }
           }
         }
-        return <ComponentItem {...item} key={item.id} style={customStyles} />
+        items.push( <ComponentItem {...item} key={item.id} style={customStyles} /> )
       }
     });
 
